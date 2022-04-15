@@ -1,0 +1,30 @@
+body
+{
+    background-image: linear-gradient(to right top, #db94ff, #cc4aff, #9441c4, #6900a6, #48007b);
+}
+h3 
+{
+    font-size: 20px !important;
+}
+
+.btn-success:hover
+{
+    background-color: rgb(188, 31, 255);
+}
+canvas
+{
+animation-name:example;
+animation-duration:4s;
+animation-iteration-count:infinite ;
+}
+@keyframes example
+{
+    from{box-shadow: 1px 1px 40px rgb(0, 255, 247);}
+    to{box-shadow: 1px 1px 40px rgb(255, 242, 0);}
+    
+}
+#heading
+{
+    font-family: cursive;
+    color:rgb(175, 4, 255)
+}
