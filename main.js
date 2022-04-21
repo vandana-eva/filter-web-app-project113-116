@@ -1,7 +1,7 @@
-lipstickX=0;
-lipstickY=0;
+lipX=0;
+lipY=0;
 function preload() 
-{  lipstick = loadImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL8Fo-JHeIdTmuZhfef3NyEl-lM4aoaKpm7g&usqp=CAU");
+{  lipstick = loadImage("http://assets.stickpng.com/images/584c61d3269a83097a7d04c9.png");
 }
 function setup() 
 { canvas= createCanvas(300, 300);
@@ -21,7 +21,7 @@ function modelLoaded()
 
 function draw() 
 { image(video, 0, 0, 300, 300); 
-    image(lipstick,lipstickX,lipstickY,30,30);
+    image(lipstick,lipX,lipY,30,30);
 }
 function take_snapshot()
 { 
@@ -31,7 +31,9 @@ function take_snapshot()
 function gotPoses(results)
  { if(results.length > 0) 
     { console.log(results);
-         lipstickX = results[0].pose.lipstick.x=15; 
-         lipstickY = results[0].pose.lipstick.y=15; 
+         lipX = results[0].pose.lip.x; 
+         lipY = results[0].pose.lip.y; 
+         console.log("lipX= "+lipX);
+         console.log("lipY= "+lipY);
     } 
 }
